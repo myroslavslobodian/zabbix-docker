@@ -8,7 +8,7 @@ services:
   volumes:
    - /etc/localtime:/etc/localtime:ro
    - /etc/timezone:/etc/timezone:ro 
-#   - dbsocket:/var/run/mysqld/
+   - dbsocket:/var/run/mysqld/
    - ./zbx_env/usr/lib/zabbix/alertscripts:/usr/lib/zabbix/alertscripts:ro
    - ./zbx_env/usr/lib/zabbix/externalscripts:/usr/lib/zabbix/externalscripts:ro
    - ./zbx_env/var/lib/zabbix/dbscripts:/var/lib/zabbix/dbscripts:ro
@@ -39,9 +39,7 @@ services:
    - MYSQL_PASSWORD
    - MYSQL_ROOT_USER
    - MYSQL_ROOT_PASSWORD
-#   - client-key.pem
-#   - client-cert.pem
-#   - root-ca.pem
+
   depends_on:
    - mysql-server
   networks:
