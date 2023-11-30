@@ -366,7 +366,7 @@ services:
 
 
 
-#  command: /usr/sbin/snmptrapd -C -c /etc/snmp/snmptrapd.conf -Lo -A
+
   profiles:
    - full
    - all
